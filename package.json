@@ -1,7 +1,11 @@
 {
-  "name": "mrZuuh",
-  "version": "1.0.0",
+  "name": "mr_zuuh",
+  "version": "1.0.1",
   "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "dev" : "nodemon"
+},
   "repository": "https://github.com/leonardoEugenio/mrZuuh.git",
   "author": "Leonardo Eugenio Mascarenhas Mantoni <51415831+leonardoEugenio@users.noreply.github.com>",
   "license": "MIT"
