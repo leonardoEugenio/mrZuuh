@@ -4,9 +4,12 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./app.js",
-    "dev" : "nodemon"
-},
+    "dev": "nodemon"
+  },
   "repository": "https://github.com/leonardoEugenio/mrZuuh.git",
   "author": "Leonardo Eugenio Mascarenhas Mantoni <51415831+leonardoEugenio@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
 }
