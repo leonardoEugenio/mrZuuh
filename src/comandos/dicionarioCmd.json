@@ -1,5 +1,6 @@
 {
     "comandos" : [
-        "Ajuda : Mostra todos os comandos"
+        "ajuda : Mostra todos os comandos",
+        "limpar : apaga todas as mensagens de um canal"
     ]
 }
