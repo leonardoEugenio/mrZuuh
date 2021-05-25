@@ -1,2 +1,3 @@
 /node_modules
-./src/configDS.json
+src/configDS.json
+notes/mensagens
