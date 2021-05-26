@@ -8,8 +8,7 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
-        readMensege(message)
+        readMensege(message, client)
 });
-
 
 client.login(configDS.token)

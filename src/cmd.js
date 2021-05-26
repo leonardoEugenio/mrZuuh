@@ -1,8 +1,9 @@
 const ConfigDs = require('./configDS.json');
 const ajuda    = require('./comandos/ajuda');
 const limpar   = require('./comandos/limpar')
+const play     = require('./comandos/play')
 
-async function readMensege(msg) {
+async function readMensege(msg, bot) {
 
     if (msg.author.bot) return;
     if (msg.channel.name != "comandos") return;
@@ -14,9 +15,16 @@ async function readMensege(msg) {
 
     if (cmd === "ajuda") {
         ajuda(msg);
+        return;
     }
     if (cmd === "limpar"){
         limpar(msg);
+        return;
     }
+    if (cmd === "play") {
+        play(msg, bot);
+        return;
+    }
+    msg.reply(`O comando "${msg.toString()}" não existe\n Caso tenha alguma dulcida sobre comandos use o comando ".ajuda"`)
 }
 module.exports = readMensege;
