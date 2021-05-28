@@ -28,5 +28,5 @@ mrZuuh é um bot de discord que possibilita jogar cidade dorme pelo dicord
 
 
 ## Metas 1.0.0
-	+ [X] Fazer o bot rodar;
-	+ [ ] Add os personagens detetive, assassino e cidadão 
+	- [x] Fazer o bot rodar;
+	- [ ] Add os personagens detetive, assassino e cidadão 
