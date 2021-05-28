@@ -22,7 +22,7 @@ async function readMensege(msg, bot) {
         return;
     }
     if (cmd === "play") {
-        play(msg, bot);
+        play(msg);
         return;
     }
     msg.reply(`O comando "${msg.toString()}" não existe\n Caso tenha alguma dulcida sobre comandos use o comando ".ajuda"`)
