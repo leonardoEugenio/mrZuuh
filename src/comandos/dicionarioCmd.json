@@ -2,6 +2,7 @@
     "comandos" : [
         ".ajuda : Mostra todos os comandos",
         ".limpar : apaga todas as mensagens de um canal",
-        ".play: começa o jogo"
+        ".newGame: Cria uma partida, você vira ADM",
+        ".join: Entra em uma partida existente"
     ]
 }

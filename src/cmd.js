@@ -1,7 +1,7 @@
 const ConfigDs = require('./configDS.json');
 const ajuda    = require('./comandos/ajuda');
 const limpar   = require('./comandos/limpar')
-const play     = require('./comandos/play')
+const newGame     = require('./comandos/newGame')
 
 async function readMensege(msg, bot) {
 
@@ -21,8 +21,8 @@ async function readMensege(msg, bot) {
         limpar(msg);
         return;
     }
-    if (cmd === "play") {
-        play(msg);
+    if (cmd === "newGame" || cmd === "ng") {
+        newGame(msg);
         return;
     }
     msg.reply(`O comando "${msg.toString()}" não existe\n Caso tenha alguma dulcida sobre comandos use o comando ".ajuda"`)

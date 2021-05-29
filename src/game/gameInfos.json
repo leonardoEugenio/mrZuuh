@@ -1,0 +1,11 @@
+{
+    "config" : {
+        "qtdDetetives": 0,
+        "qtdKilers": 0,
+        "IdAdm": null,
+        "maxCidadoes":0
+    },
+    "players" : {
+        "qtd_players": 0
+    }
+}
