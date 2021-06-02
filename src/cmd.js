@@ -1,8 +1,10 @@
 const ConfigDs = require('./configDS.json');
-const ajuda    = require('./comandos/ajuda');
-const limpar   = require('./comandos/limpar');
-const newGame  = require('./comandos/newGame');
-const join  = require('./comandos/join');
+const commands = {
+    "ajuda"    : require('./comandos/ajuda'),
+    "limpar"   : require('./comandos/limpar'),
+    "ng"  : require('./comandos/newGame'),
+    "join"     : require('./comandos/join')
+}
 
 async function readMensege(msg, bot) {
 
@@ -14,22 +16,10 @@ async function readMensege(msg, bot) {
     }
     const cmd = msg.toString().replace(ConfigDs.prefix , "");
 
-    if (cmd === "ajuda") {
-        ajuda(msg);
-        return;
+    if (commands[cmd]) {
+        commands[cmd](msg, bot);
+    }else{
+        msg.reply(`O comando "${msg.toString()}" não existe\n Caso tenha alguma dulvida sobre comandos use o comando ".ajuda"`);
     }
-    if (cmd === "limpar"){
-        limpar(msg);
-        return;
-    }
-    if (cmd === "newGame" || cmd === "ng") {
-        newGame(msg);
-        return;
-    }
-    if (cmd === "join") {
-        join(msg);
-        return;
-    }
-    msg.reply(`O comando "${msg.toString()}" não existe\n Caso tenha alguma dulcida sobre comandos use o comando ".ajuda"`)
 }
 module.exports = readMensege;

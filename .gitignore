@@ -1,4 +1,3 @@
+/notes
 /node_modules
-src/configDS.json
-notes/mensagens
-.gitignore
+/src/configDS.json

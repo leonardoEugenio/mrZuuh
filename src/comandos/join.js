@@ -6,7 +6,8 @@ function join(msg) {
     const player = msg.member;
     
     player.user.personagem = "cidadao"
-    global.gameInf.players = player.user;
+    global.gameInf.players[global.gameInf.players.qtdPlayers + 1] = player.user;
+    global.gameInf.players.qtdPlayers ++;
 
     player.voice.setChannel("845149323607932948");
 }
