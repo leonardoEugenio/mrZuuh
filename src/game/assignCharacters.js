@@ -1,21 +1,25 @@
 function assignCharacters() {
-    const characters = randownCharacters();
-
-    console.log(global.gameInf.players);
-
-    global.gameInf.players[characters.assassino].user.personagem = "assassino";
-    global.gameInf.players[characters.policia].user.personagem = "policia";
+    for (let i = 0; i < global.gameInf.config.qtdDetetives; i++) {
+        var character = "detetive";
+        addCharacter(character);
+    }
+    for (let i = 0; i < global.gameInf.config.qtdKilers; i++) {
+        var character = "Kiler";
+        addCharacter(character);
+    }
     console.log(global.gameInf.players);
 }
 
-function randownCharacters() {
-    const assassino = Math.floor(Math.random() * (global.gameInf.players.qtdPlayers - 0) + 0);
-    const policia = Math.floor(Math.random() * (global.gameInf.players.qtdPlayers - 0) + 0);
-    if (assassino == policia) {
-        randownCharacters();
-    } else {
-        const characters = {assassino, policia};
-        return (characters);
-    }
+function randownNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function addCharacter(character) {
+    const drawn = randownNumber(1, global.gameInf.players.qtdPlayers);
+     if (global.gameInf.players[drawn].personagem == "cidadao") {
+         global.gameInf.players[drawn].personagem = character;
+     }else{
+         addCharacter(character);
+     }
 }
 module.exports = assignCharacters;

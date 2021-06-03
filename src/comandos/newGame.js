@@ -47,6 +47,5 @@ function newGame(msg, param) {
     global.gameInf.config.qtdDetetives = param[0];
     global.gameInf.config.qtdKilers = param[1];
     global.gameInf.config.maxCidadoes = param[2];
-    console.log(global.gameInf);
 }
 module.exports = newGame;
