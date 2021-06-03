@@ -3,6 +3,7 @@
         ".ajuda : Mostra todos os comandos",
         ".limpar : apaga todas as mensagens de um canal",
         ".ng: Cria uma partida, você vira ADM",
-        ".join: Entra em uma partida existente"
+        ".join: Entra em uma partida existente",
+        ".start: Começa o jogo depois de configurado"
     ]
 }

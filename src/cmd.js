@@ -4,7 +4,7 @@ const commands = {
     "limpar"   : require('./comandos/limpar'),
     "ng"       : require('./comandos/newGame'),
     "join"     : require('./comandos/join'),
-    "tu"       : require('./comandos/tu')
+    "start"    : require('./game/start'),
 }
 
 async function readMensege(msg, bot) {
